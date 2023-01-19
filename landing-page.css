@@ -1,0 +1,168 @@
+body {
+  font-family: Roboto;
+  display: flex;
+  background-color: rgb(206, 223, 252);
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.header {
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Roboto;
+  background-color: rgb(16, 41, 92);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.logo {
+  display: inline-block;
+  color: white;
+  margin: 7px;
+  width: 50px;
+  border-radius: 20px; 
+  border-image-width: 5px;
+  border-color: white;
+}
+
+.website-title {
+  margin: 5px;
+  font-size: 20px;
+  font-family: Fredoka One;
+  text-decoration: none;
+  margin-right: 30px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.5px 0.5px 5px rgb(184, 184, 230) ;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.links a {
+  margin: 10px;
+  text-decoration: none;
+  margin-right: 30px;
+  color: rgb(224, 224, 255);
+  text-shadow: 0.5px 0.5px 5px rgb(184, 184, 230) ;
+}
+.page1 {
+  height: 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  background-size:cover;
+  flex-shrink: 1;
+  background-image: url(images/1254287.png);
+  background-color: rgb(116, 124, 195);
+}
+
+.subscribe-button {
+  width: 200px;
+  margin: 30px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.imgs {
+  height: 400px;
+}
+
+.information-container {
+  background-color: rgba(2, 10, 50, 0.5);
+  stroke-opacity: 0.5;
+  display: flex;
+  padding: 50px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-around;
+  margin: 50px;
+  height: 500px;
+}
+
+.information-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.information {
+  font-family: Fredoka One;
+  font-size: 40px;
+  color: white;
+}
+
+.information-2 {
+  text-justify: distribute-all-lines;
+  width: 600px;
+  line-height: 30px;
+  font-size: 20px;
+  text-size-adjust: 700px;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.link {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 15px;
+  font-size: 25px;
+  margin-top: 20px;
+  font-family: Fredoka One;
+  border: 3px solid;
+  border-radius: 1px;
+  border-radius: 10px;
+  animation: colorChange 0.75s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorChange {
+  0% {
+      background: rgb(55, 121, 186);
+  }
+  100% {
+      background: rgb(42, 64, 190);
+  }
+}
+
+.link:hover {
+  background: white;
+}
+
+.info-img {
+  flex: 1;
+}
+
+.page2 {
+  background-color: rgb(225, 225, 255);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.page2 p {
+
+}
+
+.page3 {
+  flex: 1;
+}
+
+.page4 {
+  flex: 1;
+}
