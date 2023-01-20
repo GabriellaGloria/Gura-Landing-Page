@@ -7,6 +7,8 @@ body {
   margin: 0;
 }
 
+html{scroll-behavior:smooth}
+
 .header {
   font-weight: 800;
   font-size: 18px;
@@ -53,7 +55,8 @@ body {
   margin: 10px;
   text-decoration: none;
   margin-right: 30px;
-  color: rgb(224, 224, 255);
+  font-size: 20px;
+  color: rgb(238, 238, 252);
   text-shadow: 0.5px 0.5px 5px rgb(184, 184, 230) ;
 }
 .page1 {
@@ -75,6 +78,7 @@ body {
 }
 
 .imgs {
+  flex-shrink: 1;
   height: 400px;
 }
 
@@ -82,6 +86,7 @@ body {
   background-color: rgba(2, 10, 50, 0.5);
   stroke-opacity: 0.5;
   display: flex;
+  flex-shrink: 1;
   padding: 50px;
   border-radius: 50px;
   align-items: center;
@@ -93,12 +98,14 @@ body {
 .information-group {
   display: flex;
   align-items: center;
+  flex-shrink: 1;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .information {
   font-family: Fredoka One;
+  text-shadow: 3px 3px 3px rgba(113, 171, 241, 0.9);
   font-size: 40px;
   color: white;
 }
@@ -137,7 +144,14 @@ body {
       background: rgb(42, 64, 190);
   }
 }
-
+@keyframes colorChange2 {
+  0% {
+    background: rgb(89, 145, 201);
+}
+100% {
+    background: rgb(12, 72, 141);
+}
+}
 .link:hover {
   background: white;
 }
@@ -147,22 +161,162 @@ body {
 }
 
 .page2 {
-  background-color: rgb(225, 225, 255);
-
+  background-color: rgb(176, 191, 234);
+  animation: colorChange2 2s infinite;
+  animation-direction: alternate;
   display: flex;
-  flex-direction: row;
+  text-justify: distribute-all-lines;
+  flex-direction: column;
+  transition: 1s;
   justify-content: center;
   align-items: center;
 }
-
-.page2 p {
-
+/*
+#page2 {
+  background-image: linear-gradient(180deg, rgb(89, 103, 207), rgb(148, 185, 227), rgb(89, 103, 207));
 }
+*/
+.page2 p {
+  flex-wrap: wrap;
+  justify-self: center;
+  align-self: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(252, 253, 255);
+  text-shadow: -3px 3px 5px #d7dbe180;
+  font-family: Fredoka One;
+}
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.holo-logo {
+  margin-bottom: -16px;
+  align-items: center;
+  height: 70px;
+}
+.page2 a{
+  font-size: 25px;
+  font-family: Josefin Sans;
+  font-weight: 500;
+  text-shadow: -3px 3px 5px #c8d4e980;
+  color: white;
+}
+.photos {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 30px;
+}
+
+.photos img {
+  width: 205px;
+  margin: 10px;
+  transition: 0.5s;
+  border-radius: 30px;
+  border: 7px solid white;
+  box-shadow: 0px 0px 15px rgba(177, 201, 229, 0.7);
+}
+
+.photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(36, 214, 234, 0.9);
+}
+
+
+.photos img .seven {
+  object-fit: contain;
+}
+
 
 .page3 {
-  flex: 1;
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  background-size:cover;
+  flex-shrink: 1;
+  align-items: center;
 }
 
-.page4 {
-  flex: 1;
+#page3 {
+  background-image: linear-gradient(180deg, rgb(36, 104, 173), rgb(224, 235, 248));
+}
+
+.page3 p {
+  font-family: Fredoka One;
+  font-size: 30px;
+  text-justify:inter-ideograph;
+  color: rgb(67, 101, 180);
+  /*text-decoration: underline  dotted rgb(17, 47, 109);*/
+  text-shadow: 3px 3px 3px white;
+}
+
+.helper {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 20px white;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 40px;
+}
+
+.gura-quote {
+  margin: 30px;
+  font-size: 10px;
+}
+
+.gura-gif {
+  align-self: center;
+  width: 400px;
+  margin: 10px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.contactme p {
+  margin: 20px;
+  font-family: Fredoka One;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.footer {
+  height: 90px;
+  display: flex;
+  color: white;
+  font-family: Cookie;
+  font-size: 30px;
+  background-color: rgb(16, 41, 92);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.credits {
+  margin: 50px;
+}
+
+.contactme {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+.mail, .github, .insta {
+  width: 50px;
+  margin: 10px;
+}
+
+.insta {
+  width: 73px;
 }
