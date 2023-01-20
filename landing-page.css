@@ -4,6 +4,7 @@ body {
   background-color: rgb(206, 223, 252);
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
 }
 
@@ -14,6 +15,7 @@ html{scroll-behavior:smooth}
   font-size: 18px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-family: Roboto;
   background-color: rgb(16, 41, 92);
@@ -22,6 +24,7 @@ html{scroll-behavior:smooth}
 .logo-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-left: 30px;
 }
 
@@ -48,6 +51,7 @@ html{scroll-behavior:smooth}
 .links {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -60,11 +64,11 @@ html{scroll-behavior:smooth}
   text-shadow: 0.5px 0.5px 5px rgb(184, 184, 230) ;
 }
 .page1 {
-  height: 100vh;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-around;
   background-size:cover;
+  flex-wrap: wrap;
   flex-shrink: 1;
   background-image: url(images/1254287.png);
   background-color: rgb(116, 124, 195);
@@ -76,10 +80,15 @@ html{scroll-behavior:smooth}
   height: 50px;
   font-size: 20px;
 }
-
+.information-group, .info-img {
+  flex-shrink: 1;
+}
 .imgs {
   flex-shrink: 1;
   height: 400px;
+  align-self: center;
+  justify-self: center;
+  margin: 0 auto;
 }
 
 .information-container {
@@ -87,18 +96,19 @@ html{scroll-behavior:smooth}
   stroke-opacity: 0.5;
   display: flex;
   flex-shrink: 1;
+  flex-wrap: wrap;
   padding: 50px;
   border-radius: 50px;
   align-items: center;
   justify-content: space-around;
   margin: 50px;
-  height: 500px;
 }
 
 .information-group {
   display: flex;
   align-items: center;
   flex-shrink: 1;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -157,6 +167,7 @@ html{scroll-behavior:smooth}
 }
 
 .info-img {
+  display: flex;
   flex: 1;
 }
 
@@ -169,6 +180,7 @@ html{scroll-behavior:smooth}
   flex-direction: column;
   transition: 1s;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
 }
 /*
@@ -182,6 +194,7 @@ html{scroll-behavior:smooth}
   align-self: center;
   font-size: 40px;
   font-weight: 600;
+  flex-wrap: wrap;
   color: rgb(252, 253, 255);
   text-shadow: -3px 3px 5px #d7dbe180;
   font-family: Fredoka One;
@@ -191,6 +204,7 @@ html{scroll-behavior:smooth}
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -237,10 +251,10 @@ html{scroll-behavior:smooth}
 
 
 .page3 {
-  height: 60vh;
   display: flex;
   justify-content: space-around;
-  background-size:cover;
+  flex-direction: row;
+  flex-wrap:initial;
   flex-shrink: 1;
   align-items: center;
 }
@@ -258,6 +272,10 @@ html{scroll-behavior:smooth}
   text-shadow: 3px 3px 3px white;
 }
 
+.page3 {
+  padding: 20px;
+}
+
 .helper {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 0px 20px white;
@@ -265,12 +283,15 @@ html{scroll-behavior:smooth}
   padding: 10px;
   flex-direction: column;
   align-items: center;
+  flex-wrap: initial;
   justify-content: center;
+  flex-shrink: 1;
   margin: 20px;
   border-radius: 40px;
 }
 
 .gura-quote {
+  flex-shrink: 1;
   margin: 30px;
   font-size: 10px;
 }
@@ -280,7 +301,6 @@ html{scroll-behavior:smooth}
   width: 400px;
   margin: 10px;
   height: 400px;
-  object-fit: cover;
 }
 
 .contactme p {
@@ -292,8 +312,10 @@ html{scroll-behavior:smooth}
 
 .footer {
   height: 90px;
+  justify-self: end;
   display: flex;
   color: white;
+  flex-wrap: inherit;
   font-family: Cookie;
   font-size: 30px;
   background-color: rgb(16, 41, 92);
@@ -320,3 +342,4 @@ html{scroll-behavior:smooth}
 .insta {
   width: 73px;
 }
+
